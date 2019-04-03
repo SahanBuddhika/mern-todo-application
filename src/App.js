@@ -14,7 +14,7 @@ class App extends Component {
         <div className = "container">
 
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <a className="navbar-brand" href="https://codingthesmartway.com" target="-blank">
+          <a className="navbar-brand" href="https://codingthesmartway.com" target="_blank">
           </a>
        
 
@@ -28,14 +28,14 @@ class App extends Component {
                 <li className="navbar-item">
                   <Link to="/create" className="nav-link">Create Todos</Link>
                 </li> 
-                
+
               </ul>
             </div>
         </nav>
         
-        <Route path="/" exact component={TodoList} />
-        <Route path="/edit/:id" exact component={EditTodo} />
-        <Route path="/create" exact component={CreateTodo} />
+        <Route path="/" exact component = {TodoList} />
+        <Route path="/edit/:id" exact component = {EditTodo} />
+        <Route path="/create" exact component = {CreateTodo} />
 
         </div>
       </Router>
