@@ -1,4 +1,5 @@
 import React ,  {Component} from 'react';
+import axios from 'axios';
 
 export default class CreateTodo extends Component{
 
@@ -44,6 +45,13 @@ export default class CreateTodo extends Component{
         console.log(`Todo Responsible: ${this.state.todo_responsible}`);
         console.log(`Todo Priority: ${this.state.todo_priority}`);
         console.log(`Todo Completed: ${this.state.todo_completed}`);
+
+        this.setState({
+            todo_description:'',
+            todo_responsible:'',
+            todo_priority:'',
+            todo_completed:false
+        });
 
         this.setState({
             todo_description:'',
