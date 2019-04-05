@@ -46,6 +46,8 @@ export default class CreateTodo extends Component{
         console.log(`Todo Priority: ${this.state.todo_priority}`);
         console.log(`Todo Completed: ${this.state.todo_completed}`);
 
+        axios.post('http://localhost:4000/todos/add',newTodo).then(res => console.log(res.data));
+
         this.setState({
             todo_description:'',
             todo_responsible:'',
@@ -53,12 +55,7 @@ export default class CreateTodo extends Component{
             todo_completed:false
         });
 
-        this.setState({
-            todo_description:'',
-            todo_responsible:'',
-            todo_priority:'',
-            todo_completed:false
-        })
+       
     }
 
     render(){
