@@ -67,10 +67,26 @@ export default class EditTodo extends Component{
                                     <input className="form-check-input" type="radio" name="priorityOptions" id="priorityHigh" value="High" checked={this.state.todo_priority==='High'} onChange={this.onChangeTodoPriority} />
                                     <label className="form-check-label">High</label>
                                 </div>
+
+                                <div className="form-check">
+                                    <input  type="checkbox"
+                                            className="form-check-input"
+                                            id="completedCheckbox"
+                                            name="completedCheckbox"
+                                            onChange={this.onChangeTodoCompleted}
+                                            checked={this.state.todo_completed}
+                                            value={this.state.todo_completed}/>
+
+                                    <label className="form-check-label" htmlFor="completedCheckbox">
+                                        completed
+                                    </label>
+                                    <br/>
+                                    <div className="form-group">
+                                        <input type="submit" value="Update Todo" className="btn btn-primary" />
+                                    </div>
+
+                                </div>
                             </div>
-
-
-                           
                     </form>
             </div>
         )
